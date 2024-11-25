@@ -1549,6 +1549,9 @@ body > div.tarif > div > div.tarif_content > div.tarif1.tarif2 > div.tarif_funti
         background-image: url(img/line2.png);
         height: 24px;
     }
+    .add_item1>span{
+        display: inline;
+    }
     /* about */
     .about_heading{
         width: 250px;
@@ -1771,12 +1774,18 @@ body > div.tarif > div > div.tarif_content > div.tarif1.tarif2 > div.tarif_funti
         font-size: 30px;
         padding-left: 30px;
     }
+    .add_item1>span{
+        display: block;
+    }
     .add_item1 {
-        padding: 17px 23vw;
+        padding: 17px 20vw;
     }
     .add_item2{
         padding: 20px;
         height: auto;
+    }
+    .add_item1>span{
+        display: block;
     }
     .buy1>h1{
         font-size: 18px;
@@ -1822,4 +1831,5 @@ body > div.tarif > div > div.tarif_content > div.tarif1.tarif2 > div.tarif_funti
         margin: 16% auto;
         padding: 55px 33px 15px
     }
+    
 }
