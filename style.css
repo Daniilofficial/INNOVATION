@@ -1775,10 +1775,10 @@ body > div.tarif > div > div.tarif_content > div.tarif1.tarif2 > div.tarif_funti
         padding-left: 30px;
     }
     .add_item1>span{
-        display: block;
+        display: inline;
     }
     .add_item1 {
-        padding: 17px 20vw;
+        padding: 17px 16vw;
     }
     .add_item2{
         padding: 20px;
