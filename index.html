@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интеграция маркетплейсов с облачной ERP системой Мой склад</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Обратная связь</h2>
+            <form id="modal-form">
+                <label for="name">ФИО<span>*</span></label>
+                <div class="field-container">
+                    <input type="text" id="name" name="name" required>
+                    <span id="name-success" class="success-icon">✔</span>
+                </div>
+
+                <label for="phone">Номер телефона<span>*</span></label>
+                <div class="field-container">
+                    <input type="tel" id="phone" name="phone" required>
+                    <span id="phone-success" class="success-icon">✔</span>
+                </div>
+                <span id="phone-error" class="error-message"></span>
+
+                <button class="send" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <img src="img/logo.png" alt="" class="logo">
+                <div class="menu-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="menu">
+                    <li class="menu_items"><a href="#" >Наши преимущества</a></li>
+                    <li class="menu_items"><a href="#" >Возможности МС</a></li>
+                    <li class="menu_items"><a href="#" >Тарифы</a></li>
+                    <li class="menu_items"><a href="#" >Контакты</a></li>
+                    <li class="menu_items"><span id="button"  >Обратная связь</span></li>
+                    <li class="menu_items"><span >ВОЙти</span></li>
+                </ul><!--menu-->
+            </nav><!--nav-->
+            <div class="header_content">
+                <div class="title2">OZON, Wildberries, Яндекс Маркет и МегаМаркет</div>
+                <div class="title">Интеграция маркетплейсов</div>
+                <div class="title">c облачной ERP системой "Мой склад"</div>
+                <div class="header_buttons">
+                    <span id="button" class="btn">Попробовать бесплатно <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><title>Artboard-35</title><g id="Left-2" data-name="Left"><polygon points="24 12.001 2.914 12.001 8.208 6.706 7.501 5.999 1 12.501 7.5 19.001 8.207 18.294 2.914 13.001 24 13.001 24 12.001" style="fill:#ffffff"/></g></svg></span>
+                    <span id="button" class="btn2">Записаться на презентацию</span>
+                </div>
+            </div>
+        </div><!--container-->
+    </header><!--header-->
+
+    <!-- INTRO -->
+    <div class="intro">
+        <div class="container">
+            <div class="intro_title">
+                <img src="img/logo.png" alt=""> <span>- ведение учета продаж с маркетплейсов в одной системе</span>
+            </div><!--intro_title-->
+            <div class="intro_heading">Мы <span>поможем Вам</span></div>
+            <div class="intro_container">
+                <div class="intro_container_item">
+                    <div class="intro_name">Автоматизировать резервирование товаров </div>
+                    <div class="intro_text"><span>чтобы избежать отмены заказов, которые приведут к штрафам</span><span> или блокировкам</span></div>
+                </div>
+                <div class="intro_container_item">
+                    <div class="intro_name">Контролировать оплаты, комиссии и возвраты</div>
+                    <div class="intro_text"><span>чтобы бухгалтер в любую минуту мог произвести сверку</span><span> взаиморасчетов с маркетплейсами</span></div>
+                </div>
+                <div class="intro_container_item">
+                    <div class="intro_name">Осуществлять мгновенный обмен остатками
+                        с маркетплейсами</div>
+                    <div class="intro_text">чтобы сразу начать продавать только что оприходованный товар</div>
+                </div>
+                <div class="intro_container_item">
+                    <div class="intro_name">Печатать ярлыки, этикетки и акты на все маркетплейсы из одного окна</div>
+                    <div class="intro_text"><span>чтобы ускорить работу склада и обеспечить безопасность</span> доступов в личные кабинеты маркетплейсов</div>
+                </div>
+                <div class="intro_container_item">
+                    <div class="intro_name">Контролировать статусы заказов</div>
+                    <div class="intro_text"><span>чтобы своевременно отгружать заказы и контролировать</span><span> уже отгруженные</span></div>
+                </div>
+                <div class="intro_container_item">
+                    <div class="intro_name">Автоматически создавать отгрузки в заказах</div>
+                    <div class="intro_text">чтобы иметь актуальные остатки в учетной системе</div>
+                </div>
+            </div>
+
+        </div><!--container-->
+    </div><!--INTRO-->
+    <div class="line"></div>
+    <!-- about -->
+     <div class="about">
+        <div class="container">
+            <div class="about_title">НАши <span>Преимущества</span></div>
+            <div class="about_container">
+                <img src="img/VS.png" alt="" class="vs">
+                <div class="about_item1">
+                    <div class="about_heading"><img src="img/logo2.png" alt=""></div>
+                    <div class="about_text"><img src="img/pick2.png" alt="">Мгновенное создание новых заказов</div>
+                    <div class="about_text"><img src="img/pick2.png" alt=""><span>Создание входящих платежей и комиссий</span>
+                        <span>по гибким, заранее настроенным параметрам</span></div>
+                    <div class="about_text"><img src="img/pick2.png" alt=""><span>Возможность загрузки оплат и комиссий</span><span>из отчетов маркетплейсов в формате xls</span>
+                        </div>
+                    <div class="about_text"><img src="img/pick2.png" alt=""><span>Автоматическое сопоставление товаров</span><span>из учетной системы и ЛК маркетплейса</span>
+                        </div>
+                    <div class="about_text"><img src="img/pick2.png" alt=""><span>Удобная работа с дублями товаров -</span><span> достаточно задать артикулы по шаблону</span></div>
+                    <div class="about_text"><img src="img/pick2.png" alt=""><span>Возможность настройки страхового запаса</span><span> товара в зависимости от его оборачиваемости</span></div>
+                    <div class="about_text"><img src="img/pick2.png" alt=""><span>Печать этикеток, актов и заказов из одного </span><span>окна</span></div>
+                    <div class="about_text"><img src="img/pick2.png" alt=""><span>Доступный и понятный мониторинг синхронизаций</span><span> остатков, изменений цен и заказов</span></div>
+                </div>
+                <div class="about_item2">
+                    <div class="about_heading2">Конкуренты</div>
+                    <div class="about_text2"><img src="img/pick3.png" alt="">Проверка и создание новых заказов раз в 10-15 минут</div>
+                    <div class="about_text2"><img src="img/pick3.png" alt=""><span>В учетной системе создаются финансовые</span><span> документы основываясь просто на статусе заказа</span></div>
+                    <div class="about_text2"><img src="img/pick3.png" alt="">Подобного функционала просто нет</div>
+                    <div class="about_text2"><img src="img/pick3.png" alt=""><span>Сложная система сопоставления товаров, постоянно</span><span>требуется загрузка и синхронизация таблиц связей</span> </div>
+                    <div class="about_text2"><img src="img/pick3.png" alt=""><span>Сложная система сопоставления товара и его</span> <span>дублей, синхронизация таблиц связей и так далее</span></div>
+                    <div class="about_text2"><img src="img/pick3.png" alt=""><span>Страховой запас настраивается для всех товаров</span> на складе</div>
+                    <div class="about_text2"><img src="img/pick3.png" alt=""><span>Необходимо постоянно переключаться между</span> <span>вкладками браузера, отсутствует возможность печати</span> <span>необходимых документов</span></div>
+                    <div class="about_text2"><img src="img/pick3.png" alt=""><span>Сложные для понимания логи, в которых</span><span> разберутся разве что сами программисты</span></div>
+                </div>
+                </div>
+            </div>
+        </div>
+     </div><!--about-->
+     <!-- layer -->
+    <div class="layer">
+        <div class="layer_pic"><img src="img/layer1.png" alt=""></div>
+        <div class="layer_pic2"><img src="img/layer2.png" alt=""></div>
+        <div class="container">
+            <div class="layer_container">
+                <div class="layer_title"><span>«Мой склад»</span> – продажи, закупки, склад, финансы, клиенты и поставщики в одной системе</div>
+                <div class="layer_heading"><span>In-novation </span>работает с учетной <span>системой <img src="img/sklad.png" alt=""></span></div>
+                <div class="layer_content">
+                    <div class="child-block">
+    
+                        <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide"><img src="img/slider1.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="img/slider2.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="img/slider3.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="img/slider4.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="img/slider5.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="img/slider6.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="img/slider7.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="img/slider8.png" alt=""></div>
+                                  <div class="swiper-slide"><img src="img/slider9.png" alt=""></div>
+                                </div>
+    
+                                <div class="swiper-button-next"></div>                 
+                                <div class="swiper-button-prev"></div>
+                        </div>
+                    </div><!--child block-->
+                    <div class="child-block2">
+                        <img src="img/sklad.png" alt="">
+                        <div class="child-block-text"><span>– облачный сервис управления торговлей для малого</span><span> и среднего бизнеса. С его помощью можно: управлять</span><span>продажами и закупками, вести складской учет,</span>  <span>автоматизировать розницу, контролировать финансы,</span><span>работать с базой клиентов.</span></div>
+                        <div class="child_btn"><span>Являемся официальным партнером</span><img src="img/pic.png" alt=""></div>
+                    </div>
+                </div><!--layer content-->
+                <div class="layer_container2">
+                    <div class="layer_container2_title">И на это есть ряд веских причин:</div>
+                    <div class="layer_container2_content">
+                        <div class="content_first">
+                            <div class="list1">Облачная система доступная на любом компьютере и из любой точки мира, не требующая сложной установки на выделенный сервер</div>
+                            <div class="list1">Доступно огромное количество уже готовых решений и дополнений.
+                                Их легко самостоятельно установить в два клика, не надо вызывать специально обученного программиста, который будет несколько недель реализовывать задуманное</div>
+                            <div class="list1">Аналитические отчеты с различными данными. Сравнивайте продажи между маркетплейсами и другими каналами продаж в едином отчете</div>
+                            <div class="list1">Планирование закупок: 
+                                прогноз с учетом текущих остатков и резервов, а также рекомендации по объему заказов поставщикам</div>
+                        </div>
+                        <div class="content_second">
+                            <div class="list1 list2">Складской учет, формирование и печать всего объема первичной документации</div>
+                            <ul class="list1 list2">Маркировка товаров:
+                                <li>Поддержка плагина КриптоПро</li>
+                                <li>Заказ кодов маркировки</li>
+                                <li>Ввод/Вывод/Списание кодов</li>
+                                </ul>
+                            <div class="list1 list2">Современный и интуитивно понятный интерфейс</div>
+                            <div class="list1 list2">Круглосуточная техническая поддержка которая решает все вопросы максимально быстро и компетентно.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--container-->
+    </div><!--layer-->
+    <!-- illustration -->
+    <div class="illustration">
+        <div class="container">
+            <div class="illustration_title">Быстрый старт с IN-NOVATION</div>
+            <div class="illustration_text">Начинающий селлер? <span>Нужна учетная система?</span></div>
+            <div class="illustration_content">
+                <div class="illustration_content_item" data-number="1">Импортировать номенклатуру</div>
+                <div class="illustration_content_item" data-number="2">Загрузить остатки</div>
+                <div class="illustration_content_item" data-number="3">Начать продавать на всех крупнейших маркетплейсах РФ</div>
+            </div>
+            <div class="illustration_content2">
+                <div class="illustration_text2">
+                    Как выглядит обработка заказов с IN-NOVATION
+                </div> 
+                <div class="illustration_list">
+                    <div class="vertical_line"></div>
+                    <div class="illustration_list_item">
+                        В «Мой склад» падают новые . заказы из маркетплейсов и товары мгновенно резервируются
+                    </div>
+                    <div class="illustration_list_item">
+                        Пакетно переводите заказы в «Мой склад» в статус «В сборке», после чего товары списывается с остатка
+                    </div>
+                    <div class="illustration_list_item">
+                        Печатаете этикетки в один клик и готовите товары к отгрузке
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- add -->
+     <div class="add">
+
+        <div class="container">
+            <div class="add_title">ОПЫТНЫЙ СЕЛЛЕР? <span>ИЩЕТЕ СПОСОБ УВЕЛИЧИТЬ ПРОДАЖИ?</span></div>
+            <div class="add_container">
+                <div class="add_item">
+                    <div class="add_item1">Работайте
+                        <span>по Dropshipping</span></div>
+                    <div class="add_item2"><img src="img/add1.png" alt=""><span>Не нужно хранить товары у себя на складе и вести учет их остатков</span>Просто укажите местоположение обновляемого фида (XML, YML, XLS) с товарными остатками поставщика в ЛК In-Novation и начни продавать.</div>
+                </div>
+                <div class="add_item">
+                    <div class="add_item1">Создавайте разные <span>варианты карточек </span></div>
+                    <div class="add_item2"><img src="img/add2.png" alt=""><span>на одном маркетплейсе 
+                        </span><div>с функционалом дублей артикулов</div></div>
+                </div>
+                <div class="add_item">
+                    <div class="add_item1">Оптимизируйте свои <span>страховые запасы</span></div>
+                    <div class="add_item2"><img src="img/add3.png"><span>с помощью отчета ЧДН</span>
+                        <div>– число дней наличия товара на складе</div></div>
+                </div>
+
+            </div>
+        </div>
+     </div>
+     <!-- buy -->
+     <div class="buy">
+        <div class="container">
+            <div class="buy_title"><span>бесплатный тестовый период </span>сервиса <span class="yellow">in-novation</span> уже сегодня</div>
+            <div class="buy_container">
+                <div class="buy1"><h1>14 дней</h1><span>бесплатного пользования</span></div>
+                <div class="buy2">                <span id="button"  class="btn">Попробовать бесплатно <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><title>Artboard-35</title><g id="Left-2" data-name="Left"><polygon points="24 12.001 2.914 12.001 8.208 6.706 7.501 5.999 1 12.501 7.5 19.001 8.207 18.294 2.914 13.001 24 13.001 24 12.001" style="fill:#ffffff"/></g></svg></span></div>
+
+            </div>
+        </div>
+     </div>
+     <div class="tarif">
+        <div class="container">
+            <div class="tarif_title">Наши <span>тарифы</span></div>
+            <div class="tarif_content">
+                <div class="tarif1">
+                    <div class="tarif_heading">тариф</div>
+                    <div class="tarif_name">“Базовый”</div>
+                     <div class="tarif_funtions">
+                        <div class="tarif_funtions_heading">Доступный функционал:</div>
+                        <ul class="tarif_menu">
+                            <li class="tarif_item">Синхронизация заказов и статусов</li>
+                            <li class="tarif_item">Автоматическое создание отгрузок</li>
+                            <li class="tarif_item">Учет платежей и комиссий</li>
+                            <li class="tarif_item">Печать этикеток маркетплейсов</li>
+
+                            <li class="tarif_item">Импорт товаров из маркетплейсов</li>
+                        </ul>
+                     </div>
+                     <img src="img/tarif1.png" alt="" class="tarif_footer">
+                     <div class="tarif_cost_container">
+                        <div class="tarif_cost">3 500 ₽</div>
+                        <div class="tarif_date">1 месяц/маркетплейс</div>
+                     </div>
+                </div>
+                <div class="tarif1 tarif2">
+                    <div class="tarif_heading">тариф</div>
+                    <div class="tarif_name">“Профи””</div>
+                     <div class="tarif_funtions">
+                        <div class="tarif_funtions_heading">Доступный функционал:</div>
+                        <ul class="tarif_menu tarif_menu2">
+                            <li class="tarif_item">Мгновенный обмен остатками</li>
+                            <li class="tarif_item">Синхронизация заказов и статусов</li>
+                            <li class="tarif_item">Автоматическое создание отгрузок</li>
+                            <li class="tarif_item">Учет платежей и комиссий</li>
+                            <li class="tarif_item">Печать этикеток маркетплейсов</li>
+                            <li class="tarif_item">Импорт товаров из маркетплейсов</li>
+                            <li class="tarif_item">Работа с дублями товаров</li>
+                            <li class="tarif_item">Настройка страхового запаса</li>
+                            <li class="tarif_item">Экспорт цен</li>
+                            <li class="tarif_item">Dropshipping</li>
+                            <li class="tarif_item">Сбор ЧДН</li>
+                        </ul>
+                     </div>
+                     <!-- <div class="tarif_footer">-10% при оплате за полгода <span><img src="img/percentage.png" alt="">Скидка</span></div> -->
+                     <img src="img/tarif2.png" alt="" class="tarif_footer">
+                     <div class="tarif_cost_container">
+                        <div class="tarif_cost">6 000 ₽</div>
+                        <div class="tarif_date">1 месяц/маркетплейс</div>
+                     </div>
+                </div>
+
+            </div>
+        </div>
+     </div>
+     <!-- final -->
+     <div class="final">
+        <div class="container">
+            <div class="final_container">
+                <div class="final_content">
+                    <div class="final_title">дополнительные опции</div>
+                    <div class="final_heading">Настройка обмена
+                        в маркетплейсам <span>все необходимое для быстрого старта</span></div>
+                        <ul class="final_list">
+                            <li class="final_list_item">Настройка обмена в ЛК In-novation</li>
+                            <li class="final_list_item">Добавление всех необходимых шаблонов печати и экспорта в учетную систему</li>
+                        </ul>
+                        <div class="final_text one"><img src="img/vector.png" alt=""><div>Настройку можно произвести самостоятельно, руководствуясь нашими инструкциями, но <span>с нашим специалистом будет комфортнее и быстрее</span></div></div>
+                </div>
+                <div class="absolute_block">
+        <div class="text1">БЕСПЛАТНО</div>
+        <div class="text2"><img src="img/Group.png" alt=""> до 31 октября</div>
+        <div class="text3">15000 ₽</div>
+                </div>
+            <img src="img/photo.png" alt="">
+            <div class="final_text two"><img src="img/vector.png" alt=""><div>Настройку можно произвести самостоятельно, руководствуясь нашими инструкциями, но <span>с нашим специалистом будет комфортнее и быстрее</span></div></div>
+            </div>
+        </div>
+        <div class="line line2"></div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer_name">IN-novation ждет Вас в числе наших клиентов</div>
+            <div class="contacts">
+                <div class="contacts_title">КОНТАКТЫ</div>
+                <div class="contact_container">
+                    <a href="https://t.me/in_novation_ru" target="_blank" rel="noopener noreferrer" class="contact_item"><img src="img/tg.svg" alt="">@in_novation_ru</a>
+                    <a href="tel:+79527911184" class="contact_item"><img src="img/tel.svg" alt="">+7 (952) 791 1184</a>
+                    <a href="mailto:info@in-novation.ru" class="contact_item"><img src="img/pochta.svg" alt="">info@in-novation.ru</a>
+                </div>
+            </div>
+            <div class="data_container">
+                <div class="data_container1">
+                    <div class="data_item1"><img src="img/location.svg" alt="">Москва, Берёзовая аллея,14Бс2, оф. 101</div>
+                    <div class="data_item1">Все права защищены©</div>
+                </div>
+                <div class="data_container2">
+                    <div class="data_item2">ИП Лазуткин Андрей Валерьевич</div>
+                    <div class="data_item2">ИНН 770804488906</div>
+                    <div class="data_item2">ОГРНИП 313774609100486</div>
+                    <div class="data_item1">Все права защищены©</div>
+                </div>
+            </div>
+            <div class="data_container3">
+                <a href="#" class="data_item3">Публичная оферта</a>
+                <a href="#" class="data_item3">Политику конфиденциальности</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <!-- https://www.figma.com/design/SESxnveRpNZORUbJYuCgrH/%D0%98%D0%BD%D0%9D%D0%9E%D0%B2%D0%B5%D0%B9%D1%88%D0%B5%D0%BD?node-id=14-2&node-type=canvas&t=4qRTVYszwHosaYH7-0 -->
+</body>
+</html>
