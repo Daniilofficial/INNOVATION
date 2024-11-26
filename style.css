@@ -1206,6 +1206,9 @@ body > div.tarif > div > div.tarif_content > div.tarif1.tarif2 > div.tarif_funti
 /* laptop vs pc small width version */
 @media (max-width: 1024px) {
     /* HEADER */
+    .header_content{
+        margin-left: 0;
+    }
     .container{
         padding: 0 50px;
     }
@@ -1619,6 +1622,9 @@ body > div.tarif > div > div.tarif_content > div.tarif1.tarif2 > div.tarif_funti
         border-bottom-right-radius: 35px;
         border-bottom-left-radius: 35px;
     }
+    .header_content{
+        margin-left: 0;
+    }
     .container{
         padding: 0 24px;
     }
@@ -1772,7 +1778,7 @@ body > div.tarif > div > div.tarif_content > div.tarif1.tarif2 > div.tarif_funti
     }
     .add_title{
         font-size: 30px;
-        padding-left: 30px;
+        
     }
     .add_item1>span{
         display: inline;
